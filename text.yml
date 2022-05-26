@@ -1,0 +1,11 @@
+---
+- name: 
+  hosts: all
+  tasks:
+    - name: creating file with text
+      copy:
+        dest: /root/Downloads/text1.txt
+        content: 
+          a
+          b
+...   
