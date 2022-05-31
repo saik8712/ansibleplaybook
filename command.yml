@@ -4,4 +4,8 @@
   tasks:
     - name:
       shell: lsblk >>/root/Downloads/command.txt
+    - name: Creating an empty file
+      file:
+        path: /root/Documents/command1 
+        state: touch
 ...      
