@@ -1,6 +1,6 @@
 ---
-- name: hello world
-  hosts: all
+- name: hello world 23
+  hosts: localhost
   tasks:
     - name:
       shell: echo "i am at prodevans"
