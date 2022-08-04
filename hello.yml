@@ -1,6 +1,6 @@
 ---
 - name: hello world 23
-  hosts: localhost
+  hosts: ansibletower.example.com
   tasks:
     - name:
       shell: echo "i am at prodevans"
