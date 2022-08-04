@@ -1,0 +1,6 @@
+---
+- name: testing playbook
+  hosts: 192.168.29.25
+  tasks:
+    - name: ping pong
+      ping:
