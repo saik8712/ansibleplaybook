@@ -1,6 +1,7 @@
 ---
 - name:
   hosts: localhost
+  gathering_facts: no
   tasks:
     - name:
       shell: lsblk >>/root/Downloads/command.txt
