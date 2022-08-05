@@ -1,7 +1,7 @@
 ---
 - name:
   hosts: localhost
-  gathering_facts: no
+  #-private-key=~/.ssh/keys/id_rsa
   tasks:
     - name:
       shell: lsblk >>/root/Downloads/command.txt
