@@ -3,10 +3,4 @@
   hosts: localhost
   tasks:
     - name:
-      shell: echo "i am at prodevans"
-    - name: Creating an empty file
-      file:
-        path: /root/Documents/helloworld1
-        state: touch
-
-...      
+      shell: echo "i am at prodevans"  
