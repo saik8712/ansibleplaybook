@@ -5,14 +5,14 @@
     - name:
       service:
         name: "{{item}}"
-        state: status
+        state: state
       loop:
-        - automation-controller
-        - postgresql
-        - redis
-        - nginx
-        - supervisord
-        - receptor
+         - automation-controller
+         - postgresql
+         - redis
+         - nginx
+         - supervisord
+         - receptor
       register: ALL_service_status
       ignore_errors: yes
     - name: status report
