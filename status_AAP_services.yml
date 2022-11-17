@@ -1,0 +1,21 @@
+---
+- name: starting automation controller 
+  hosts: localhost
+  tasks:
+    - name:
+      service:
+        name: "{{item}}"
+        state: status
+      loop:
+        - automation-controller
+        - postgresql
+        - redis
+        - nginx
+        - supervisord
+        - receptor
+      register: ALL_service_status
+      ignore_errors: yes
+    - name: status report
+      debug: 
+        var: ALL_service_status
+  :wq!      
