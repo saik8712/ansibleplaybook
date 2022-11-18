@@ -1,21 +1,12 @@
 ---
 - name: starting automation controller 
   hosts: localhost
+  remote_user: root
   tasks:
     - name:
-      service:
-        name: "{{item}}"
-        state: state
-      loop:
-         - automation-controller
-         - postgresql
-         - redis
-         - nginx
-         - supervisord
-         - receptor
+      shell: /root/service.sh
       register: ALL_service_status
-      ignore_errors: yes
-    - name: status report
+    - name: showing report
       debug: 
-        var: ALL_service_status
+        var: ALL_service_status.stdout_lines
   :wq!      
