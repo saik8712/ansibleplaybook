@@ -5,6 +5,7 @@
   
     - name: install python 
       raw: yum -y install python
+      when: check_python.rc != 0
     - name: Install apache packages
       yum:
         name: httpd
