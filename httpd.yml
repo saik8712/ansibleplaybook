@@ -4,7 +4,7 @@
   tasks:
     - name: install python 
       yum:
-        name: python3
+        name: python3.9
         state: latest
     - name: Install apache packages
       yum:
