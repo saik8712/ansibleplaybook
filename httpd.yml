@@ -3,8 +3,9 @@
   hosts: localhost
   tasks:
     - name: install python 
-      raw: yum -y install python*
-      when: check_python.rc != 0
+      yum:
+        name: python3
+        state: latest
     - name: Install apache packages
       yum:
         name: httpd
